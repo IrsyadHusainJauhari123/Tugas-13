@@ -13,6 +13,8 @@
                 <h3>{{ $produk->nama }}</h3>
                 <hr>
                 @include ('produk.show.detail')
+
+
                 <p>
                     {!! nl2br($produk->deskripsi) !!}
                 </p>
