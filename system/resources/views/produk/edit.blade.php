@@ -17,7 +17,7 @@
                 Ubah Data Produk
             </div>
             <div class="card-body">
-                <form action="{{ url('admin/produk', $produk->id) }}" method="post" enctype="multipart/form-data">
+                <form action="{{ url('admin/produk', $produk->uuid) }}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="form-group">
