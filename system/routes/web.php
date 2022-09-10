@@ -53,13 +53,13 @@ Route::get('setting', [SettingController::class, 'index']);
 Route::post('setting', [SettingController::class, 'store']);
 
 //admin sama penegunjung berbeda tampilan
-route::prefix('pembeli/')->middleware('auth:pembeli')->group(function () {
+route::prefix('admin')->middleware('auth:pembeli')->group(function () {
     Route::post('/produk/filter', [ProdukController::class, 'Filter']);
     Route::resource('/produk', ProductController::class);
     Route::resource('/product', ProductController::class);
     Route::resource('/user', UserController::class);
 });
-route::prefix('penjual/')->middleware('auth:penjual')->group(function () {
+route::prefix('admin')->middleware('auth:penjual')->group(function () {
     Route::post('/produk/filter', [ProdukController::class, 'Filter']);
     Route::resource('/produk', ProductController::class);
     Route::resource('/product', ProductController::class);
