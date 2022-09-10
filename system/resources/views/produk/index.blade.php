@@ -65,12 +65,12 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>
                                             <div class="btn-group">
-                                                <a href="{{ url('admin/produk', $produk->id) }}" class="btn btn-dark"><i
+                                                <a href="{{ url('admin/produk', $produk->uuid) }}" class="btn btn-dark"><i
                                                         class="fa fa-info"></i></a>
-                                                <a href="{{ url('admin/produk', $produk->id) }}/edit"
+                                                <a href="{{ url('admin/produk', $produk->uuid) }}/edit"
                                                     class="btn btn-warning"><i class="fa fa-edit"></i></a>
                                                 @include('template.utils.delete', [
-                                                    'url' => url('admin/produk', $produk->id),
+                                                    'url' => url('admin/produk', $produk->uuid),
                                                 ])
                                             </div>
                                         </td>
